@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>coba owl Carousel</title>
+
+    <link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/owl.carousel.css"><!-- Owl carousel css -->
+	<link rel="stylesheet" href="css/owl.theme.css">
+	<style type="text/css">
+
+        body{
+            background-color: #ddd;
+        }
+        .container{
+            background: #fff;
+        }
+        .zoom-box i{
+            transition: all 0.3s ease-out 0s;
+            width: 2em;
+            height: 2.3em;
+        }
+        .zoom-box {
+    position: absolute;
+    border: 1px solid;
+    padding: 69px 105px;
+    margin: 30px 0;
+}
+.pf-overlay{
+    position: absolute;
+    opacity: 0;
+    padding-top: 12%;
+    width: 63%;
+    height: 100%;
+    top: 0;
+    transition: .8s;
+}
+.single-pf:hover .pf-overlay{
+    opacity: 1;
+}
+.single-pf h4 {
+    color: black;
+    font-size: 4rem;
+    font-weight: bold;
+}
+.single-pf p{
+    font-size: 2rem;
+}
+h1{
+
+-moz-animation-duration: 1s;
+-moz-animation-delay: .5s;
+
+}
+
+	</style>
+</head>
+<body>
+<h1 class="animate">coba animasi css </h1>
+     <div class="container">
+     <div class="row">
+    <div id="carousel" class="owl-Carousel owl-theme">
+        <img class="img-responsive" src="img/slide1.png" alt="1">
+        <img class="img-responsive" src="img/slide2.png" alt="2">
+        <img class="img-responsive" src="img/skill3.jpg" alt="3">
+        <img class="img-responsive" src="img/skill.jpg" alt="4">
+        <img class="img-responsive" src="img/skill2.jpg" alt="5">
+        <img class="img-responsive" src="img/skill3.jpg" alt="6">
+    </div>
+    </div>
+    </div>
+
+     <div class="container">
+     <div class="row">
+    <div id="carousel2" class="owl-Carousel2 owl-theme2">
+        <img class="img-responsive" src="img/slide2.png" alt="1">
+        <img class="img-responsive" src="img/slide1.png" alt="2">
+        <div class="coba">
+            
+        <img class="img-responsive" src="img/skill3.jpg" alt="3">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+        </div>
+
+            <div class="container">
+            <div class="row"> <!-- slide skill -->
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 ">
+                    <h2>I'H Arjilm. Expert in HTML</h2> 
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-8 ">
+                    <img class="img-responsive" src="img/skill.jpg">
+                </div>
+            </div>
+
+            </div>
+    </div>
+    </div>  
+    </div>
+
+    <div>
+        <h2>coba zoom image</h2>
+
+        <a href="#" id="pop">
+    <img id="imageresource" src="img/galeri-4.jpg" style="width: 400px; height: 264px; padding:0 0 34px;">
+    Click to Enlarge
+</a>
+
+<!-- Creates the bootstrap modal where the image will appear -->
+<div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Image preview</h4>
+      </div>
+      <div class="modal-body">
+        <img src="" id="imagepreview" style="width: 400px; height: 264px;" >
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<!-- item gallery slider -->
+<div class="col-xs-12 pf">
+                            <div class="single-pf">
+                                <img src="img/galeri-1.jpg">     
+                                <div class="pf-overlay">
+                                    <h4>Photo Grapher</h4>
+                                    <p>Gimp / Inkscape</p>
+                                    <a href="img/galeri-1.jpg">
+                                    <i class="fa fa-search-plus"></i>
+                                    </a>
+                                </div>
+                            </div>                  
+                        </div>
+
+
+	<script type="text/javascript" src="js/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="js/owl.carousel.js"></script>
+	<script type="text/javascript" src="css/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#carousel").owlCarousel({
+                items: 1,
+                margin: 25
+
+            })
+
+            $("#carousel2").owlCarousel({
+                items: 1,
+                autoplay: true,
+                margin: 25
+            })
+        })
+
+        $("#pop").on("click", function() {
+   $('#imagepreview').attr('src', $('#imageresource').attr('src')); // here asign the image to the modal when the user click the enlarge link
+   $('#imagemodal').modal('show'); // imagemodal is the id attribute assigned to the bootstrap modal, then i use the show function
+});
+     </script>
+</body>
+</html>
